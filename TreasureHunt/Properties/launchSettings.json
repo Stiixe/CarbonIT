@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TreasureHunt": {
+      "commandName": "Project",
+      "commandLineArgs": "./input.txt"
+    }
+  }
+}
