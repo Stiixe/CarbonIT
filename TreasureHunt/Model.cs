@@ -74,13 +74,13 @@ namespace TreasureHunt
     {
         Dictionary<int, string> ORIENTATION_ANGLES = new Dictionary<int, string>
         {
-            { 0, "N"},
-            { 90, "E" },
-            { 180, "S" },
-            { 270, "O" },
-            { -90, "O" },
-            { -180, "S" },
-            { -270, "E" }
+            { 0, Constants.NORTH},
+            { 90, Constants.EAST },
+            { 180, Constants.SOUTH },
+            { 270, Constants.WEST },
+            { -90, Constants.WEST },
+            { -180, Constants.SOUTH },
+            { -270, Constants.EAST }
         };
 
         private readonly string name;
@@ -124,16 +124,16 @@ namespace TreasureHunt
 
             switch (orientation)
             {
-                case "N":
+                case Constants.NORTH:
                     y -= 1;
                     break;
-                case "S":
+                case Constants.SOUTH:
                     y += 1;
                     break;
-                case "E":
+                case Constants.EAST:
                     x += 1;
                     break;
-                case "O":
+                case Constants.WEST:
                     x -= 1;
                     break;
             }

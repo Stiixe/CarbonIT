@@ -86,12 +86,12 @@ namespace TreasureHuntTest
         [TestMethod]
         public void AdventurerConstructor_ShouldInitializeProperties()
         {
-            Adventurer adventurer = new Adventurer("John", 1, 2, "N", "AAGD");
+            Adventurer adventurer = new Adventurer("John", 1, 2, Constants.NORTH, "AAGD");
 
             Assert.AreEqual("John", adventurer.Name);
             Assert.AreEqual(1, adventurer.PositionX);
             Assert.AreEqual(2, adventurer.PositionY);
-            Assert.AreEqual("N", adventurer.Orientation);
+            Assert.AreEqual(Constants.NORTH, adventurer.Orientation);
             Assert.AreEqual("AAGD", adventurer.MovementString);
             Assert.AreEqual(0, adventurer.TreasureCount);
         }
@@ -99,27 +99,27 @@ namespace TreasureHuntTest
         [TestMethod]
         public void Rotate_ShouldChangeOrientation()
         {
-            Adventurer adventurer = new Adventurer("John", 1, 2, "N", "AAGD");
+            Adventurer adventurer = new Adventurer("John", 1, 2, Constants.NORTH, "AAGD");
 
             adventurer.Rotate(true);
 
-            Assert.AreEqual("E", adventurer.Orientation);
+            Assert.AreEqual(Constants.EAST, adventurer.Orientation);
         }
 
         [TestMethod]
         public void Rotate_ShouldWrapAroundWhenReaching360Degrees()
         {
-            Adventurer adventurer = new Adventurer("John", 1, 2, "O", "AAGD");
+            Adventurer adventurer = new Adventurer("John", 1, 2, Constants.WEST, "AAGD");
 
             adventurer.Rotate(true);
 
-            Assert.AreEqual("N", adventurer.Orientation);
+            Assert.AreEqual(Constants.NORTH, adventurer.Orientation);
         }
 
         [TestMethod]
         public void GetNextMovement_ShouldReturnCorrectCoordinates()
         {
-            Adventurer adventurer = new Adventurer("John", 1, 2, "E", "AAGD");
+            Adventurer adventurer = new Adventurer("John", 1, 2, Constants.EAST, "AAGD");
             int nextX, nextY;
 
             adventurer.GetNextMovement(out nextX, out nextY);
@@ -132,7 +132,7 @@ namespace TreasureHuntTest
         public void Move_ShouldUpdatePositionAndReturnPreviousElement()
         {
             MapElement nextElement = new MapElement(2, 2);
-            Adventurer adventurer = new Adventurer("John", 1, 2, "E", "A");
+            Adventurer adventurer = new Adventurer("John", 1, 2, Constants.EAST, "A");
 
             MapElement? result = adventurer.Move(nextElement);
 
@@ -145,7 +145,7 @@ namespace TreasureHuntTest
         [TestMethod]
         public void GetTreasure_ShouldIncrementTreasureCount()
         {
-            Adventurer adventurer = new Adventurer("John", 1, 2, "E", "A");
+            Adventurer adventurer = new Adventurer("John", 1, 2, Constants.EAST, "A");
 
             adventurer.GetTreasure();
 
