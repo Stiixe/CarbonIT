@@ -119,12 +119,12 @@ namespace TreasureHuntTest
             controller.MoveAdventurers();
             Assert.AreEqual(1, adventurer.PositionX);
             Assert.AreEqual(0, adventurer.PositionY);
-            Assert.AreEqual("W", adventurer.Orientation);
+            Assert.AreEqual("O", adventurer.Orientation);
 
             controller.MoveAdventurers();
             Assert.AreEqual(0, adventurer.PositionX);
             Assert.AreEqual(0, adventurer.PositionY);
-            Assert.AreEqual("W", adventurer.Orientation);
+            Assert.AreEqual("O", adventurer.Orientation);
 
             controller.MoveAdventurers();
             Assert.AreEqual(0, adventurer.PositionX);
@@ -157,12 +157,12 @@ namespace TreasureHuntTest
             controller.MoveAdventurers();
             Assert.AreEqual(1, adventurer.PositionX);
             Assert.AreEqual(0, adventurer.PositionY);
-            Assert.AreEqual("W", adventurer.Orientation);
+            Assert.AreEqual("O", adventurer.Orientation);
 
             controller.MoveAdventurers();
             Assert.AreEqual(1, adventurer.PositionX);
             Assert.AreEqual(0, adventurer.PositionY);
-            Assert.AreEqual("W", adventurer.Orientation);
+            Assert.AreEqual("O", adventurer.Orientation);
 
             controller.MoveAdventurers();
             Assert.AreEqual(1, adventurer.PositionX);
@@ -196,14 +196,14 @@ namespace TreasureHuntTest
             controller.MoveAdventurers();
             Assert.AreEqual(1, adventurer.PositionX);
             Assert.AreEqual(0, adventurer.PositionY);
-            Assert.AreEqual("W", adventurer.Orientation);
+            Assert.AreEqual("O", adventurer.Orientation);
             Assert.AreEqual(1, adventurer.TreasureCount);
             Assert.AreEqual(1, treasure.Count);
 
             controller.MoveAdventurers();
             Assert.AreEqual(0, adventurer.PositionX);
             Assert.AreEqual(0, adventurer.PositionY);
-            Assert.AreEqual("W", adventurer.Orientation);
+            Assert.AreEqual("O", adventurer.Orientation);
             Assert.AreEqual(1, adventurer.TreasureCount);
             Assert.AreEqual(1, treasure.Count);
 
@@ -255,14 +255,14 @@ namespace TreasureHuntTest
             controller.MoveAdventurers();
             Assert.AreEqual(1, adventurer.PositionX);
             Assert.AreEqual(0, adventurer.PositionY);
-            Assert.AreEqual("W", adventurer.Orientation);
+            Assert.AreEqual("O", adventurer.Orientation);
             Assert.AreEqual(1, adventurer.TreasureCount);
             Assert.AreEqual(0, treasure.Count);
 
             controller.MoveAdventurers();
             Assert.AreEqual(0, adventurer.PositionX);
             Assert.AreEqual(0, adventurer.PositionY);
-            Assert.AreEqual("W", adventurer.Orientation);
+            Assert.AreEqual("O", adventurer.Orientation);
             Assert.AreEqual(1, adventurer.TreasureCount);
             Assert.AreEqual(0, treasure.Count);
 

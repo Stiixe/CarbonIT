@@ -77,8 +77,8 @@ namespace TreasureHunt
             { 0, "N"},
             { 90, "E" },
             { 180, "S" },
-            { 270, "W" },
-            { -90, "W" },
+            { 270, "O" },
+            { -90, "O" },
             { -180, "S" },
             { -270, "E" }
         };
@@ -133,7 +133,7 @@ namespace TreasureHunt
                 case "E":
                     x += 1;
                     break;
-                case "W":
+                case "O":
                     x -= 1;
                     break;
             }

@@ -109,7 +109,7 @@ namespace TreasureHuntTest
         [TestMethod]
         public void Rotate_ShouldWrapAroundWhenReaching360Degrees()
         {
-            Adventurer adventurer = new Adventurer("John", 1, 2, "W", "AAGD");
+            Adventurer adventurer = new Adventurer("John", 1, 2, "O", "AAGD");
 
             adventurer.Rotate(true);
 
